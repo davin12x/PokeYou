@@ -12,6 +12,9 @@
 		0AD014121C59B4AE00D67F00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD014101C59B4AE00D67F00 /* Main.storyboard */; };
 		0AD014141C59B4AE00D67F00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD014131C59B4AE00D67F00 /* Assets.xcassets */; };
 		0AD014171C59B4AE00D67F00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD014151C59B4AE00D67F00 /* LaunchScreen.storyboard */; };
+		0AD014201C59CA3F00D67F00 /* ButtonVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD0141F1C59CA3F00D67F00 /* ButtonVIew.swift */; };
+		0AD014221C59CB8900D67F00 /* TextFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD014211C59CB8900D67F00 /* TextFieldsView.swift */; };
+		0AD014241C59CC0400D67F00 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD014231C59CC0400D67F00 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		0AD014131C59B4AE00D67F00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AD014161C59B4AE00D67F00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AD014181C59B4AE00D67F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AD0141F1C59CA3F00D67F00 /* ButtonVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonVIew.swift; sourceTree = "<group>"; };
+		0AD014211C59CB8900D67F00 /* TextFieldsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsView.swift; sourceTree = "<group>"; };
+		0AD014231C59CC0400D67F00 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		0AD0140B1C59B4AE00D67F00 /* PokeYou */ = {
 			isa = PBXGroup;
 			children = (
+				0AD0141E1C59CA0500D67F00 /* View */,
 				0AD0140C1C59B4AE00D67F00 /* AppDelegate.swift */,
 				0AD0140E1C59B4AE00D67F00 /* ViewController.swift */,
 				0AD014101C59B4AE00D67F00 /* Main.storyboard */,
 				0AD014131C59B4AE00D67F00 /* Assets.xcassets */,
 				0AD014151C59B4AE00D67F00 /* LaunchScreen.storyboard */,
 				0AD014181C59B4AE00D67F00 /* Info.plist */,
+				0AD014231C59CC0400D67F00 /* Constant.swift */,
 			);
 			path = PokeYou;
+			sourceTree = "<group>";
+		};
+		0AD0141E1C59CA0500D67F00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AD0141F1C59CA3F00D67F00 /* ButtonVIew.swift */,
+				0AD014211C59CB8900D67F00 /* TextFieldsView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD0140F1C59B4AE00D67F00 /* ViewController.swift in Sources */,
+				0AD014201C59CA3F00D67F00 /* ButtonVIew.swift in Sources */,
+				0AD014241C59CC0400D67F00 /* Constant.swift in Sources */,
+				0AD014221C59CB8900D67F00 /* TextFieldsView.swift in Sources */,
 				0AD0140D1C59B4AE00D67F00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

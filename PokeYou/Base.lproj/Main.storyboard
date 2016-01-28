@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeYou" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vq-HU-zLs" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
+                                <rect key="frame" x="20" y="197" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLb-i3-XEA" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
+                                <rect key="frame" x="20" y="245" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uio-kf-kdA">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="dqv-ju-7lL"/>
+                                    <constraint firstAttribute="height" constant="21" id="gCg-Vk-GLL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-yB-121" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
+                                <rect key="frame" x="20" y="339" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.2196078431372549" green="0.45882352941176469" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PHE-9D-Ztb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ikke-navngivet-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cmw-RG-70l">
+                                <rect key="frame" x="254" y="28" width="93" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0xa-iN-FNE"/>
+                                    <constraint firstAttribute="width" constant="93" id="VFB-gD-6DN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poke You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-Ma-riq">
+                                <rect key="frame" x="254" y="116" width="93" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="P9m-va-A7L"/>
+                                    <constraint firstAttribute="height" constant="34" id="Sxv-cX-vjt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.10980392160000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEED AN ACCOUNT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHm-CJ-2Ek">
+                                <rect key="frame" x="181" y="453" width="238" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="1a3-tx-3wG"/>
+                                    <constraint firstAttribute="height" constant="21" id="tqN-RT-UM3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXH-Sg-wZR" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
+                                <rect key="frame" x="181" y="497" width="238" height="30"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7UT-H9-umD"/>
+                                    <constraint firstAttribute="width" constant="238" id="iLN-lb-j7W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <state key="normal" title="Sign in/Sign up">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.89803921568627454" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="B9i-Ma-riq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9m8-yU-4Kb"/>
+                            <constraint firstItem="5Vq-HU-zLs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EZv-qX-npq"/>
+                            <constraint firstItem="LHm-CJ-2Ek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lu8-9q-pYY"/>
+                            <constraint firstItem="Cmw-RG-70l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="SDW-Ru-eYy"/>
+                            <constraint firstItem="5Vq-HU-zLs" firstAttribute="top" secondItem="B9i-Ma-riq" secondAttribute="bottom" constant="52" id="VTa-f2-YHJ"/>
+                            <constraint firstItem="Uio-kf-kdA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XVb-6s-XVa"/>
+                            <constraint firstItem="RLb-i3-XEA" firstAttribute="top" secondItem="5Vq-HU-zLs" secondAttribute="bottom" constant="18" id="aN5-cy-tps"/>
+                            <constraint firstItem="p83-yB-121" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cl0-bq-v17"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OXH-Sg-wZR" secondAttribute="bottom" constant="73" id="dVR-yY-Q71"/>
+                            <constraint firstItem="Uio-kf-kdA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mHz-vz-jLb"/>
+                            <constraint firstItem="5Vq-HU-zLs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nJF-Xs-D3M"/>
+                            <constraint firstItem="RLb-i3-XEA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nc5-eh-wDB"/>
+                            <constraint firstItem="RLb-i3-XEA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nqR-ZN-cjd"/>
+                            <constraint firstItem="OXH-Sg-wZR" firstAttribute="top" secondItem="LHm-CJ-2Ek" secondAttribute="bottom" constant="23" id="oUA-pD-iRt"/>
+                            <constraint firstItem="B9i-Ma-riq" firstAttribute="top" secondItem="Cmw-RG-70l" secondAttribute="bottom" constant="8" id="oeP-vt-mRP"/>
+                            <constraint firstItem="Cmw-RG-70l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pdT-P7-TAu"/>
+                            <constraint firstItem="5Vq-HU-zLs" firstAttribute="top" secondItem="B9i-Ma-riq" secondAttribute="bottom" constant="15" id="r2q-mQ-dSz"/>
+                            <constraint firstItem="p83-yB-121" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rlv-3J-x0u"/>
+                            <constraint firstItem="p83-yB-121" firstAttribute="top" secondItem="Uio-kf-kdA" secondAttribute="bottom" constant="29" id="sl2-2M-zZC"/>
+                            <constraint firstItem="RLb-i3-XEA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svd-SY-YXI"/>
+                            <constraint firstItem="OXH-Sg-wZR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uXK-r9-m1i"/>
+                            <constraint firstItem="5Vq-HU-zLs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xqZ-Hl-oU3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="r2q-mQ-dSz"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="264" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Ikke-navngivet-1" width="76" height="111"/>
+    </resources>
 </document>
