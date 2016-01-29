@@ -6,6 +6,174 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--FeedVC-->
+        <scene sceneID="0KW-mL-CkS">
+            <objects>
+                <viewController id="Ht6-aK-kCS" customClass="FeedVC" customModule="PokeYou" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VaM-jP-uGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="wTX-WF-9fu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7bR-pc-Ddd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="379" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WrA-QS-cfG">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="379" id="YXY-nb-7r2" customClass="PostCell" customModule="PokeYou" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="560" height="379"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YXY-nb-7r2" id="mzQ-MI-Sb6">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="379"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-Mc-XxO" userLabel="containerView" customClass="MaterialView" customModule="PokeYou" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="14" width="560" height="351"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="26E-6h-0rN">
+                                                            <rect key="frame" x="8" y="8" width="220" height="78"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-El-Kf7">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="78"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="78" id="1ec-tf-VNp"/>
+                                                                        <constraint firstAttribute="width" constant="78" id="i6O-bY-BMl"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lalit Bagga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="tEu-bE-wNh">
+                                                                    <rect key="frame" x="75" y="-21" width="70" height="78"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="78" id="bgz-AD-dTL"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="19"/>
+                                                                    <color key="textColor" red="0.88496224832214765" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="0jd-Bz-t6V">
+                                                                    <rect key="frame" x="149" y="0.0" width="71" height="56"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="56" id="2Un-VI-iJh"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="220" id="FOM-ro-K27"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cuM-ai-XPf">
+                                                            <rect key="frame" x="472" y="8" width="80" height="58"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1444" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F7-ID-Uve">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="27"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="27" id="Riw-UG-8tc"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="19"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5L-Gb-PJg">
+                                                                    <rect key="frame" x="0.0" y="37" width="80" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="YAd-O8-FOm"/>
+                                                                        <constraint firstAttribute="width" constant="80" id="pYz-ch-Ric"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                                                    <color key="textColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="58" id="Wco-a4-c69"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9GG-Oj-kSK">
+                                                            <rect key="frame" x="8" y="94" width="544" height="248"/>
+                                                            <subviews>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-0b-UcX">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="544" height="128"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="128" id="cpE-LC-YIN"/>
+                                                                    </constraints>
+                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                                </textView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-nQ-XRl">
+                                                                    <rect key="frame" x="0.0" y="140" width="544" height="108"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="108" id="zZM-Ht-wyQ"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="0H8-0b-UcX" secondAttribute="trailing" id="3hQ-wj-nGm"/>
+                                                                <constraint firstItem="0H8-0b-UcX" firstAttribute="leading" secondItem="9GG-Oj-kSK" secondAttribute="leading" id="Uhf-4z-Myu"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="3hQ-wj-nGm"/>
+                                                                    <exclude reference="Uhf-4z-Myu"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="9GG-Oj-kSK" firstAttribute="top" secondItem="26E-6h-0rN" secondAttribute="bottom" constant="8" id="0vv-wX-geq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cuM-ai-XPf" secondAttribute="trailing" constant="8" id="7JA-mU-lJe"/>
+                                                        <constraint firstItem="cuM-ai-XPf" firstAttribute="top" secondItem="gc8-Mc-XxO" secondAttribute="top" constant="8" id="AR1-x9-vME"/>
+                                                        <constraint firstItem="9GG-Oj-kSK" firstAttribute="top" secondItem="26E-6h-0rN" secondAttribute="bottom" constant="8" id="abH-uf-jzO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="9GG-Oj-kSK" secondAttribute="trailing" constant="8" id="aeC-Da-p9u"/>
+                                                        <constraint firstItem="26E-6h-0rN" firstAttribute="leading" secondItem="gc8-Mc-XxO" secondAttribute="leading" constant="8" id="bvV-au-Mx3"/>
+                                                        <constraint firstItem="9GG-Oj-kSK" firstAttribute="centerX" secondItem="gc8-Mc-XxO" secondAttribute="centerX" id="gED-Xq-GN3"/>
+                                                        <constraint firstItem="26E-6h-0rN" firstAttribute="top" secondItem="gc8-Mc-XxO" secondAttribute="top" constant="8" id="utI-kB-c4F"/>
+                                                        <constraint firstItem="9GG-Oj-kSK" firstAttribute="leading" secondItem="gc8-Mc-XxO" secondAttribute="leading" constant="8" id="w1b-Ce-LrI"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="0vv-wX-geq"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gc8-Mc-XxO" secondAttribute="trailing" constant="-8" id="IOD-MW-iLC"/>
+                                                <constraint firstItem="gc8-Mc-XxO" firstAttribute="top" secondItem="mzQ-MI-Sb6" secondAttribute="topMargin" constant="6" id="O0G-3K-ZZk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gc8-Mc-XxO" secondAttribute="bottom" constant="6" id="bOb-0W-Rp9"/>
+                                                <constraint firstItem="gc8-Mc-XxO" firstAttribute="leading" secondItem="mzQ-MI-Sb6" secondAttribute="leadingMargin" constant="-8" id="ssj-LQ-BwZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="profileImage" destination="6gM-El-Kf7" id="dGV-BT-hGQ"/>
+                                            <outlet property="showCase" destination="NRF-nQ-XRl" id="1N0-56-Fyh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WrA-QS-cfG" firstAttribute="top" secondItem="VaM-jP-uGK" secondAttribute="bottom" id="G19-Mw-WEB"/>
+                            <constraint firstItem="WrA-QS-cfG" firstAttribute="leading" secondItem="7bR-pc-Ddd" secondAttribute="leadingMargin" id="bMY-dv-dnV"/>
+                            <constraint firstItem="wTX-WF-9fu" firstAttribute="top" secondItem="WrA-QS-cfG" secondAttribute="bottom" id="e6z-L9-XTc"/>
+                            <constraint firstItem="WrA-QS-cfG" firstAttribute="trailing" secondItem="7bR-pc-Ddd" secondAttribute="trailingMargin" id="fw3-EK-RuB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IZ6-M5-mFe"/>
+                    <connections>
+                        <outlet property="tableView" destination="WrA-QS-cfG" id="7HP-j6-Y0X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hv4-Rc-Rgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="507"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -19,16 +187,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vq-HU-zLs" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
-                                <rect key="frame" x="20" y="197" width="560" height="30"/>
+                                <rect key="frame" x="20" y="197" width="560" height="35"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="NhT-W9-fN6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLb-i3-XEA" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
-                                <rect key="frame" x="20" y="245" width="560" height="30"/>
+                                <rect key="frame" x="20" y="257" width="560" height="35"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="lOl-fj-NUE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -43,15 +217,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-yB-121" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
-                                <rect key="frame" x="20" y="339" width="560" height="30"/>
+                                <rect key="frame" x="20" y="339" width="560" height="35"/>
                                 <color key="backgroundColor" red="0.2196078431372549" green="0.45882352941176469" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PHE-9D-Ztb"/>
+                                    <constraint firstAttribute="height" constant="35" id="PHE-9D-Ztb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
                                 <state key="normal" title="Login with Facebook">
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onFacebookButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PHt-RJ-anW"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ikke-navngivet-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cmw-RG-70l">
                                 <rect key="frame" x="254" y="28" width="93" height="80"/>
@@ -71,7 +248,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEED AN ACCOUNT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHm-CJ-2Ek">
-                                <rect key="frame" x="181" y="453" width="238" height="21"/>
+                                <rect key="frame" x="181" y="448" width="238" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="1a3-tx-3wG"/>
                                     <constraint firstAttribute="height" constant="21" id="tqN-RT-UM3"/>
@@ -81,16 +258,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXH-Sg-wZR" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
-                                <rect key="frame" x="181" y="497" width="238" height="30"/>
+                                <rect key="frame" x="181" y="492" width="238" height="35"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7UT-H9-umD"/>
+                                    <constraint firstAttribute="height" constant="35" id="7UT-H9-umD"/>
                                     <constraint firstAttribute="width" constant="238" id="iLN-lb-j7W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
                                 <state key="normal" title="Sign in/Sign up">
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="attemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RZy-bZ-Q28"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235294117647" green="0.89803921568627454" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
@@ -124,13 +304,41 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="5Vq-HU-zLs" id="ALr-nu-shB"/>
+                        <outlet property="password" destination="RLb-i3-XEA" id="j7x-OT-hNw"/>
+                        <segue destination="ZDd-xr-wUQ" kind="show" identifier="loggedIn" id="YAK-WM-6Ha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="337"/>
+            <point key="canvasLocation" x="-168" y="201"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xpP-XA-A2h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZDd-xr-wUQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXG-Vn-lPd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.17254901960784313" green="0.37647058823529411" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ht6-aK-kCS" kind="relationship" relationship="rootViewController" id="1sb-Qq-ZSw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhI-bB-mkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="534" y="507"/>
         </scene>
     </scenes>
     <resources>
         <image name="Ikke-navngivet-1" width="76" height="111"/>
+        <image name="heart-empty" width="150" height="147"/>
+        <image name="me" width="110" height="110"/>
+        <image name="screen" width="300" height="534"/>
     </resources>
 </document>

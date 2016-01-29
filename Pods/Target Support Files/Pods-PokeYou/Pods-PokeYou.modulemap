@@ -1,0 +1,6 @@
+framework module Pods_PokeYou {
+  umbrella header "Pods-PokeYou-umbrella.h"
+
+  export *
+  module * { export * }
+}
