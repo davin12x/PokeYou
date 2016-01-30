@@ -89,25 +89,22 @@
                                                                 <constraint firstAttribute="height" constant="58" id="Wco-a4-c69"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9GG-Oj-kSK">
-                                                            <rect key="frame" x="8" y="94" width="544" height="248"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9GG-Oj-kSK">
+                                                            <rect key="frame" x="8" y="94" width="544" height="249"/>
                                                             <subviews>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-0b-UcX">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="544" height="128"/>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0H8-0b-UcX">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="544" height="21"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="128" id="cpE-LC-YIN"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="cpE-LC-YIN"/>
                                                                     </constraints>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                                 </textView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-nQ-XRl">
-                                                                    <rect key="frame" x="0.0" y="140" width="544" height="108"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="108" id="zZM-Ht-wyQ"/>
-                                                                    </constraints>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-nQ-XRl">
+                                                                    <rect key="frame" x="0.0" y="33" width="544" height="216"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -130,6 +127,7 @@
                                                         <constraint firstItem="9GG-Oj-kSK" firstAttribute="top" secondItem="26E-6h-0rN" secondAttribute="bottom" constant="8" id="abH-uf-jzO"/>
                                                         <constraint firstAttribute="trailing" secondItem="9GG-Oj-kSK" secondAttribute="trailing" constant="8" id="aeC-Da-p9u"/>
                                                         <constraint firstItem="26E-6h-0rN" firstAttribute="leading" secondItem="gc8-Mc-XxO" secondAttribute="leading" constant="8" id="bvV-au-Mx3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9GG-Oj-kSK" secondAttribute="bottom" constant="8" id="dd7-tI-8x1"/>
                                                         <constraint firstItem="9GG-Oj-kSK" firstAttribute="centerX" secondItem="gc8-Mc-XxO" secondAttribute="centerX" id="gED-Xq-GN3"/>
                                                         <constraint firstItem="26E-6h-0rN" firstAttribute="top" secondItem="gc8-Mc-XxO" secondAttribute="top" constant="8" id="utI-kB-c4F"/>
                                                         <constraint firstItem="9GG-Oj-kSK" firstAttribute="leading" secondItem="gc8-Mc-XxO" secondAttribute="leading" constant="8" id="w1b-Ce-LrI"/>
@@ -150,6 +148,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="descriptionText" destination="0H8-0b-UcX" id="BKk-Bn-dCT"/>
+                                            <outlet property="likesLabel" destination="6F7-ID-Uve" id="4FW-Wd-EsX"/>
                                             <outlet property="profileImage" destination="6gM-El-Kf7" id="dGV-BT-hGQ"/>
                                             <outlet property="showCase" destination="NRF-nQ-XRl" id="1N0-56-Fyh"/>
                                         </connections>

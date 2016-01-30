@@ -10,6 +10,7 @@
 		0A6927E91C5AADFB0079BBE0 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6927E81C5AADFB0079BBE0 /* FeedVC.swift */; };
 		0A6927EB1C5AAF580079BBE0 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6927EA1C5AAF580079BBE0 /* PostCell.swift */; };
 		0A6927ED1C5ABE3A0079BBE0 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6927EC1C5ABE3A0079BBE0 /* MaterialView.swift */; };
+		0A6927F01C5BE30C0079BBE0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6927EF1C5BE30C0079BBE0 /* Post.swift */; };
 		0AD0140D1C59B4AE00D67F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD0140C1C59B4AE00D67F00 /* AppDelegate.swift */; };
 		0AD0140F1C59B4AE00D67F00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD0140E1C59B4AE00D67F00 /* ViewController.swift */; };
 		0AD014121C59B4AE00D67F00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD014101C59B4AE00D67F00 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		0A6927E81C5AADFB0079BBE0 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		0A6927EA1C5AAF580079BBE0 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		0A6927EC1C5ABE3A0079BBE0 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		0A6927EF1C5BE30C0079BBE0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0AD014091C59B4AD00D67F00 /* PokeYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD0140C1C59B4AE00D67F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AD0140E1C59B4AE00D67F00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = PokeYou/ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		0A6927EE1C5BE2F60079BBE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A6927EF1C5BE30C0079BBE0 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0AD014001C59B4AC00D67F00 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		0AD0140B1C59B4AE00D67F00 /* PokeYou */ = {
 			isa = PBXGroup;
 			children = (
+				0A6927EE1C5BE2F60079BBE0 /* Model */,
 				0A6927E51C5A9FE50079BBE0 /* Controller */,
 				0A6927E71C5A9FF60079BBE0 /* Constant */,
 				0AD0142E1C59EF4800D67F00 /* Services */,
@@ -299,6 +310,7 @@
 				0AD014221C59CB8900D67F00 /* TextFieldsView.swift in Sources */,
 				0AD0140D1C59B4AE00D67F00 /* AppDelegate.swift in Sources */,
 				0A6927EB1C5AAF580079BBE0 /* PostCell.swift in Sources */,
+				0A6927F01C5BE30C0079BBE0 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

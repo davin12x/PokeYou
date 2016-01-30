@@ -47,6 +47,10 @@ class ViewController: UIViewController {
                             else{
                                 NSUserDefaults.standardUserDefaults().setValue(result[key], forKey: key)
                                 DataServices.ds.REF_BASE.authUser(email, password: pass, withCompletionBlock: nil)
+                                DataServices.ds.REF_USERS.authUser(email, password: pass, withCompletionBlock: { error,authData in
+                                    let users = ["provider":authData.provider!,"testing":"testing With Attempt login "]
+                                    DataServices.ds.createFireBaseUser(authData.uid, user: users)
+                                })
                                 
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }
@@ -87,6 +91,9 @@ class ViewController: UIViewController {
                         }
                         else{
                             print("Logged in \(authData)")
+                            let user = ["provider":authData.provider!,"testing":"test Messages running"]
+                            DataServices.ds.createFireBaseUser(authData.uid, user: user)
+                            
                             NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: key)
                             self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             
