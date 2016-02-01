@@ -18,12 +18,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="379" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WrA-QS-cfG">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijm-uU-XvN" customClass="MaterialView" customModule="PokeYou" customModuleProvider="target">
+                                <rect key="frame" x="20" y="72" width="560" height="66"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vzZ-63-3qT">
+                                        <rect key="frame" x="8" y="16" width="544" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Idea Here ?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8u4-Fm-p3x">
+                                                <rect key="frame" x="0.0" y="0.0" width="427" height="34"/>
+                                                <color key="backgroundColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-icon" translatesAutoresizingMaskIntoConstraints="NO" id="XEZ-g3-5yk">
+                                                <rect key="frame" x="437" y="0.0" width="37" height="34"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="9rI-zF-zep"/>
+                                                    <constraint firstAttribute="width" constant="37" id="ZyF-Y0-LG1"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Sf3-9e-9dr" appends="YES" id="Lzf-nW-8zR"/>
+                                                </connections>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORO-G6-Oxy" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
+                                                <rect key="frame" x="484" y="0.0" width="60" height="34"/>
+                                                <color key="backgroundColor" red="0.95294117649999999" green="0.10980392160000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="PVX-mP-kgG"/>
+                                                    <constraint firstAttribute="height" constant="60" id="cxi-uu-g4D"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Post"/>
+                                                <connections>
+                                                    <action selector="onPostPressed:" destination="Ht6-aK-kCS" eventType="touchUpInside" id="YoS-Q9-X43"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vzZ-63-3qT" secondAttribute="bottom" constant="20" id="1MU-Qf-yBk"/>
+                                    <constraint firstItem="vzZ-63-3qT" firstAttribute="top" secondItem="ijm-uU-XvN" secondAttribute="top" constant="8" id="5gz-XV-XRd"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="vzZ-63-3qT" secondAttribute="trailing" id="77k-qY-slP"/>
+                                    <constraint firstItem="vzZ-63-3qT" firstAttribute="centerX" secondItem="ijm-uU-XvN" secondAttribute="centerX" id="B2X-Nl-fBQ"/>
+                                    <constraint firstItem="vzZ-63-3qT" firstAttribute="leading" secondItem="ijm-uU-XvN" secondAttribute="leadingMargin" id="BLJ-TW-i7q"/>
+                                    <constraint firstAttribute="trailing" secondItem="vzZ-63-3qT" secondAttribute="trailing" constant="8" id="PY7-F4-trG"/>
+                                    <constraint firstItem="vzZ-63-3qT" firstAttribute="leading" secondItem="ijm-uU-XvN" secondAttribute="leading" constant="8" id="RwB-gC-cqQ"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="vzZ-63-3qT" secondAttribute="bottom" constant="8" id="bfo-UF-VlO"/>
+                                    <constraint firstItem="vzZ-63-3qT" firstAttribute="top" secondItem="ijm-uU-XvN" secondAttribute="topMargin" constant="8" id="qUq-lc-wWm"/>
+                                    <constraint firstAttribute="height" constant="66" id="wED-rO-041"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1MU-Qf-yBk"/>
+                                        <exclude reference="5gz-XV-XRd"/>
+                                        <exclude reference="PY7-F4-trG"/>
+                                        <exclude reference="RwB-gC-cqQ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="379" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WrA-QS-cfG">
+                                <rect key="frame" x="20" y="146" width="560" height="454"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="379" id="YXY-nb-7r2" customClass="PostCell" customModule="PokeYou" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="379"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" id="YXY-nb-7r2" customClass="PostCell" customModule="PokeYou" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="379"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YXY-nb-7r2" id="mzQ-MI-Sb6">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="379"/>
@@ -105,6 +167,16 @@
                                                                 </textView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-nQ-XRl">
                                                                     <rect key="frame" x="0.0" y="33" width="544" height="216"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="544" id="V8Z-AD-kw4"/>
+                                                                        <constraint firstAttribute="height" constant="216" id="pCi-CD-HfX"/>
+                                                                    </constraints>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="V8Z-AD-kw4"/>
+                                                                            <exclude reference="pCi-CD-HfX"/>
+                                                                        </mask>
+                                                                    </variation>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -149,6 +221,7 @@
                                         <color key="backgroundColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="descriptionText" destination="0H8-0b-UcX" id="BKk-Bn-dCT"/>
+                                            <outlet property="likesImage" destination="0jd-Bz-t6V" id="j5f-TC-f5A"/>
                                             <outlet property="likesLabel" destination="6F7-ID-Uve" id="4FW-Wd-EsX"/>
                                             <outlet property="profileImage" destination="6gM-El-Kf7" id="dGV-BT-hGQ"/>
                                             <outlet property="showCase" destination="NRF-nQ-XRl" id="1N0-56-Fyh"/>
@@ -159,18 +232,34 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.8980392157" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ijm-uU-XvN" firstAttribute="trailing" secondItem="7bR-pc-Ddd" secondAttribute="trailingMargin" id="2QM-qU-qvL"/>
+                            <constraint firstItem="ijm-uU-XvN" firstAttribute="leading" secondItem="7bR-pc-Ddd" secondAttribute="leadingMargin" id="8Xj-Ac-Ggg"/>
                             <constraint firstItem="WrA-QS-cfG" firstAttribute="top" secondItem="VaM-jP-uGK" secondAttribute="bottom" id="G19-Mw-WEB"/>
+                            <constraint firstItem="ijm-uU-XvN" firstAttribute="top" secondItem="VaM-jP-uGK" secondAttribute="bottom" constant="8" id="Z2R-LJ-VOI"/>
                             <constraint firstItem="WrA-QS-cfG" firstAttribute="leading" secondItem="7bR-pc-Ddd" secondAttribute="leadingMargin" id="bMY-dv-dnV"/>
                             <constraint firstItem="wTX-WF-9fu" firstAttribute="top" secondItem="WrA-QS-cfG" secondAttribute="bottom" id="e6z-L9-XTc"/>
                             <constraint firstItem="WrA-QS-cfG" firstAttribute="trailing" secondItem="7bR-pc-Ddd" secondAttribute="trailingMargin" id="fw3-EK-RuB"/>
+                            <constraint firstItem="WrA-QS-cfG" firstAttribute="top" secondItem="ijm-uU-XvN" secondAttribute="bottom" constant="8" id="whd-cf-TEs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G19-Mw-WEB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="IZ6-M5-mFe"/>
                     <connections>
+                        <outlet property="imageSelectorImage" destination="XEZ-g3-5yk" id="LHt-jT-nse"/>
+                        <outlet property="postField" destination="8u4-Fm-p3x" id="hhC-cd-KFE"/>
                         <outlet property="tableView" destination="WrA-QS-cfG" id="7HP-j6-Y0X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hv4-Rc-Rgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Sf3-9e-9dr">
+                    <connections>
+                        <action selector="selectimage:" destination="Ht6-aK-kCS" id="D2v-DL-Jyj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1346" y="507"/>
         </scene>
@@ -337,6 +426,7 @@
     </scenes>
     <resources>
         <image name="Ikke-navngivet-1" width="76" height="111"/>
+        <image name="camera-icon" width="512" height="512"/>
         <image name="heart-empty" width="150" height="147"/>
         <image name="me" width="110" height="110"/>
         <image name="screen" width="300" height="534"/>
