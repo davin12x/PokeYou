@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var email:UITextField!
     @IBOutlet weak var password:UITextField!
@@ -31,6 +31,14 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        email.resignFirstResponder()
+        password.resignFirstResponder()
+        return true
     }
     @IBAction func attemptLogin(sender:UIButton!){
         if let email = email.text where email != "" , let pass = password.text where pass != "" {
@@ -82,8 +90,8 @@ class ViewController: UIViewController {
                     print("facebook login failed\(error)")
                 }
                 else{
-                    let accesstoken = FBSDKAccessToken.currentAccessToken().tokenString
-                    print("Success logged in \(accesstoken)")
+                    if FBSDKAccessToken.currentAccessToken() != nil{
+                     let accesstoken = FBSDKAccessToken.currentAccessToken().tokenString
                     DataServices.ds.REF_BASE.authWithOAuthProvider("facebook", token: accesstoken, withCompletionBlock: { error, authData in
                         
                         if error != nil{
@@ -101,10 +109,10 @@ class ViewController: UIViewController {
                     })
                     
                 }
-                
+            
+            }
         }
         
     }
-
 }
 

@@ -4,6 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 pod 'Firebase', '>= 2.5.0'
 pod 'Alamofire', '~> 3.1'
+pod "SwiftSpinner"
 target 'PokeYou' do
 
 end

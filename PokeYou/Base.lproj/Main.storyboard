@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d1g-7C-2wi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -247,11 +247,26 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="IZ6-M5-mFe"/>
+                    <navigationItem key="navigationItem" id="IZ6-M5-mFe">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="MbF-4r-NDl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YNX-EW-qUb">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogOutPressed:" destination="Ht6-aK-kCS" eventType="touchUpInside" id="mxY-1Q-55S"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageSelectorImage" destination="XEZ-g3-5yk" id="LHt-jT-nse"/>
                         <outlet property="postField" destination="8u4-Fm-p3x" id="hhC-cd-KFE"/>
                         <outlet property="tableView" destination="WrA-QS-cfG" id="7HP-j6-Y0X"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logOut" id="I5A-AO-42F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hv4-Rc-Rgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -262,6 +277,97 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1346" y="507"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="Ubs-Dp-eV4">
+            <objects>
+                <viewController id="d1g-7C-2wi" customClass="ProfileVC" customModule="PokeYou" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ae7-aA-nnU"/>
+                        <viewControllerLayoutGuide type="bottom" id="2WV-Tr-vdm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jlx-XL-HRb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="ocx-sU-bhb">
+                                <rect key="frame" x="20" y="291" width="560" height="223"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your cool name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnD-2a-6Pd" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Tsk-Fy-yeL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6v-NL-MmU" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
+                                        <rect key="frame" x="221" y="185" width="119" height="38"/>
+                                        <color key="backgroundColor" red="0.17254901959999999" green="0.37647058820000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="S5h-SK-yhu"/>
+                                            <constraint firstAttribute="width" constant="119" id="Zik-sK-3cO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSaveButtonPressed:" destination="d1g-7C-2wi" eventType="touchUpInside" id="9Jb-bQ-wRa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="M6v-NL-MmU" secondAttribute="bottom" id="SXI-oS-MPF"/>
+                                    <constraint firstItem="M6v-NL-MmU" firstAttribute="centerX" secondItem="ocx-sU-bhb" secondAttribute="centerX" id="lkx-xa-TVN"/>
+                                    <constraint firstItem="WnD-2a-6Pd" firstAttribute="leading" secondItem="ocx-sU-bhb" secondAttribute="leading" id="vMw-nI-jfe"/>
+                                    <constraint firstAttribute="trailing" secondItem="WnD-2a-6Pd" secondAttribute="trailing" id="yZR-rZ-gAv"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-MZ-KMh">
+                                <rect key="frame" x="225" y="62" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1Rg-0a-6gf"/>
+                                    <constraint firstAttribute="height" constant="150" id="K7g-26-Bww"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMB-FE-dBu">
+                                <rect key="frame" x="225" y="62" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="89u-ui-YiK"/>
+                                    <constraint firstAttribute="height" constant="150" id="wKG-Hc-3H5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                <state key="normal" title="Add Pic">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddPic:" destination="d1g-7C-2wi" eventType="touchUpInside" id="2Mf-DG-5E5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ocx-sU-bhb" firstAttribute="leading" secondItem="jlx-XL-HRb" secondAttribute="leadingMargin" id="5Eh-Is-LJp"/>
+                            <constraint firstItem="BMB-FE-dBu" firstAttribute="centerX" secondItem="QwM-MZ-KMh" secondAttribute="centerX" id="5Vx-EH-mBX"/>
+                            <constraint firstItem="BMB-FE-dBu" firstAttribute="centerX" secondItem="jlx-XL-HRb" secondAttribute="centerX" id="8S6-Ic-5wP"/>
+                            <constraint firstItem="QwM-MZ-KMh" firstAttribute="centerX" secondItem="jlx-XL-HRb" secondAttribute="centerX" id="KkC-c2-f15"/>
+                            <constraint firstItem="BMB-FE-dBu" firstAttribute="top" secondItem="ae7-aA-nnU" secondAttribute="bottom" constant="42" id="SCX-YD-rsM"/>
+                            <constraint firstItem="BMB-FE-dBu" firstAttribute="centerY" secondItem="QwM-MZ-KMh" secondAttribute="centerY" id="d9i-KB-iTy"/>
+                            <constraint firstItem="BMB-FE-dBu" firstAttribute="centerX" secondItem="QwM-MZ-KMh" secondAttribute="centerX" id="eSX-wM-NUV"/>
+                            <constraint firstItem="QwM-MZ-KMh" firstAttribute="top" secondItem="ae7-aA-nnU" secondAttribute="bottom" constant="42" id="kav-Yt-Xdj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ocx-sU-bhb" secondAttribute="trailing" id="nYb-1H-3X1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addPic" destination="BMB-FE-dBu" id="Nz3-3W-l3l"/>
+                        <outlet property="profileImage" destination="QwM-MZ-KMh" id="3Y4-cB-Ag3"/>
+                        <outlet property="userName" destination="WnD-2a-6Pd" id="xs5-RQ-KSn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VqA-ym-XP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110" y="987"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -275,7 +381,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vq-HU-zLs" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="5Vq-HU-zLs" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
                                 <rect key="frame" x="20" y="197" width="560" height="35"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -283,7 +389,7 @@
                                     <constraint firstAttribute="height" constant="35" id="NhT-W9-fN6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLb-i3-XEA" customClass="TextFieldsView" customModule="PokeYou" customModuleProvider="target">
                                 <rect key="frame" x="20" y="257" width="560" height="35"/>
@@ -293,10 +399,10 @@
                                     <constraint firstAttribute="height" constant="35" id="lOl-fj-NUE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uio-kf-kdA">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uio-kf-kdA">
+                                <rect key="frame" x="279" y="300" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="dqv-ju-7lL"/>
                                     <constraint firstAttribute="height" constant="21" id="gCg-Vk-GLL"/>
@@ -305,7 +411,7 @@
                                 <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-yB-121" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p83-yB-121" customClass="ButtonVIew" customModule="PokeYou" customModuleProvider="target">
                                 <rect key="frame" x="20" y="339" width="560" height="35"/>
                                 <color key="backgroundColor" red="0.2196078431372549" green="0.45882352941176469" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -319,14 +425,14 @@
                                     <action selector="onFacebookButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PHt-RJ-anW"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ikke-navngivet-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cmw-RG-70l">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ikke-navngivet-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cmw-RG-70l">
                                 <rect key="frame" x="254" y="28" width="93" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="0xa-iN-FNE"/>
                                     <constraint firstAttribute="width" constant="93" id="VFB-gD-6DN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poke You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-Ma-riq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Poke You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-Ma-riq">
                                 <rect key="frame" x="254" y="116" width="93" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="P9m-va-A7L"/>
@@ -364,12 +470,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90588235294117647" green="0.89803921568627454" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Uio-kf-kdA" firstAttribute="top" secondItem="RLb-i3-XEA" secondAttribute="bottom" constant="8" id="37E-JE-dkJ"/>
                             <constraint firstItem="B9i-Ma-riq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9m8-yU-4Kb"/>
                             <constraint firstItem="5Vq-HU-zLs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EZv-qX-npq"/>
                             <constraint firstItem="LHm-CJ-2Ek" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lu8-9q-pYY"/>
                             <constraint firstItem="Cmw-RG-70l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="SDW-Ru-eYy"/>
                             <constraint firstItem="5Vq-HU-zLs" firstAttribute="top" secondItem="B9i-Ma-riq" secondAttribute="bottom" constant="52" id="VTa-f2-YHJ"/>
                             <constraint firstItem="Uio-kf-kdA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XVb-6s-XVa"/>
+                            <constraint firstItem="p83-yB-121" firstAttribute="top" secondItem="Uio-kf-kdA" secondAttribute="bottom" constant="18" id="Yhl-Bc-OaS"/>
                             <constraint firstItem="RLb-i3-XEA" firstAttribute="top" secondItem="5Vq-HU-zLs" secondAttribute="bottom" constant="18" id="aN5-cy-tps"/>
                             <constraint firstItem="p83-yB-121" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cl0-bq-v17"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OXH-Sg-wZR" secondAttribute="bottom" constant="73" id="dVR-yY-Q71"/>
@@ -390,6 +498,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="r2q-mQ-dSz"/>
+                                <exclude reference="sl2-2M-zZC"/>
                             </mask>
                         </variation>
                     </view>
@@ -421,7 +530,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhI-bB-mkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534" y="507"/>
+            <point key="canvasLocation" x="912" y="916"/>
         </scene>
     </scenes>
     <resources>

@@ -24,6 +24,8 @@
 		0AD0142B1C59D3FE00D67F00 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD014281C59D3FD00D67F00 /* FBSDKLoginKit.framework */; };
 		0AD0142D1C59E23F00D67F00 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD0142C1C59E23F00D67F00 /* Default-568h@2x.png */; };
 		0AD014301C59EF6600D67F00 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD0142F1C59EF6600D67F00 /* DataServices.swift */; };
+		0AE2B0A21C5FE28A0024678D /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2B0A11C5FE28A0024678D /* CircleImageView.swift */; };
+		0AE2B0A41C5FE6900024678D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2B0A31C5FE6900024678D /* ProfileVC.swift */; };
 		23E9D916ACBD98228EC34B03 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC996B6220B5F1D852AC14FE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		0AD014281C59D3FD00D67F00 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		0AD0142C1C59E23F00D67F00 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0AD0142F1C59EF6600D67F00 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		0AE2B0A11C5FE28A0024678D /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		0AE2B0A31C5FE6900024678D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		A1F109A24DE3CA9EAF331F6F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC57BEBDA006C81A6DB52D3D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DC996B6220B5F1D852AC14FE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				0AD0140E1C59B4AE00D67F00 /* ViewController.swift */,
+				0AE2B0A31C5FE6900024678D /* ProfileVC.swift */,
 				0A6927E81C5AADFB0079BBE0 /* FeedVC.swift */,
 			);
 			name = Controller;
@@ -138,6 +143,7 @@
 				0AD014211C59CB8900D67F00 /* TextFieldsView.swift */,
 				0A6927EA1C5AAF580079BBE0 /* PostCell.swift */,
 				0A6927EC1C5ABE3A0079BBE0 /* MaterialView.swift */,
+				0AE2B0A11C5FE28A0024678D /* CircleImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE2B0A41C5FE6900024678D /* ProfileVC.swift in Sources */,
+				0AE2B0A21C5FE28A0024678D /* CircleImageView.swift in Sources */,
 				0AD0140F1C59B4AE00D67F00 /* ViewController.swift in Sources */,
 				0A6927E91C5AADFB0079BBE0 /* FeedVC.swift in Sources */,
 				0AD014201C59CA3F00D67F00 /* ButtonVIew.swift in Sources */,

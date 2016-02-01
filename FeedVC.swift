@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import Alamofire
+import SwiftSpinner
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet weak var imageSelectorImage: UIImageView!
     
     @IBOutlet weak var postField: UITextField!
@@ -46,6 +47,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIIma
             self.tableView.reloadData()
         })
     }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        postField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let posts = post[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell{
@@ -92,6 +101,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIIma
     @IBAction func onPostPressed(sender: AnyObject) {
         
         if let text = postField.text where text != ""{
+            SwiftSpinner.show("Saving your post ...")
             if let img = imageSelectorImage.image where imageSelected == true{
                 let urlString = "https://post.imageshack.us/upload_api.php"
                 let nsUrl = NSURL(string: urlString)!
@@ -103,6 +113,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIIma
                     multipartFormData.appendBodyPart(data:imgData,name:"fileupload",fileName:"image",mimeType:"image/jpg")
                     multipartFormData.appendBodyPart(data:keyData , name:"key")
                     multipartFormData.appendBodyPart(data: keyJson, name: "format")
+                    
                     
                     }) { encodingResult in
                         
@@ -120,6 +131,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIIma
 
                                     }
                                 }
+                                SwiftSpinner.hide()
                             })
                             
                         case .Failure(let error):
@@ -133,8 +145,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIIma
             }
         }
         else{
+            
             self.postToFirebase(nil)
         }
+    }
+    @IBAction func onLogOutPressed(sender: AnyObject) {
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: key)
+        performSegueWithIdentifier("logOut", sender: nil)
+        
     }
     func postToFirebase(imageUrl:String?){
         var post: Dictionary<String,AnyObject> = [
@@ -151,4 +169,5 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource,UIIma
         imageSelected = false
         tableView.reloadData()
     }
+   
 }
